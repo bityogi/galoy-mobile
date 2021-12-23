@@ -48,6 +48,7 @@ export type RootStackParamList = {
   transactionDetail: TransactionDetail
   transactionHistory: undefined
   Earn: undefined
+  changeDefaultCurrency: undefined
 }
 
 export type ContactStackParamList = {

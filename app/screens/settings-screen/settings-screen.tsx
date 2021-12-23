@@ -66,6 +66,10 @@ export const SettingsScreen: ScreenType = ({ navigation }: Props) => {
     }
   }
 
+  const defaultCurrencyAction = async () => {
+    navigation.navigate("changeDefaultCurrency")
+  }
+
   const onGetCsvCallback = async (data) => {
     const csvEncoded = data.me?.defaultAccount?.csvTransactions
 
@@ -111,6 +115,7 @@ export const SettingsScreen: ScreenType = ({ navigation }: Props) => {
       csvAction={() => getCsv({ variables: { defaultWalletId } })}
       securityAction={securityAction}
       logoutAction={logoutAction}
+      defaultCurrencyAction={defaultCurrencyAction}
     />
   )
 }
@@ -125,6 +130,7 @@ type SettingsScreenProps = {
   csvAction: (options?: QueryLazyOptions<OperationVariables>) => void
   securityAction: () => void
   logoutAction: () => Promise<void>
+  defaultCurrencyAction: () => void
 }
 
 type SettingRow = {
@@ -150,6 +156,7 @@ export const SettingsScreenJSX: ScreenType = (params: SettingsScreenProps) => {
     csvAction,
     securityAction,
     logoutAction,
+    defaultCurrencyAction,
   } = params
   const copyToClipBoard = (username) => {
     Clipboard.setString(LN_PAGE_DOMAIN + username)
@@ -224,6 +231,15 @@ export const SettingsScreenJSX: ScreenType = (params: SettingsScreenProps) => {
       action: openWhatsAppAction,
       enabled: true,
       greyed: false,
+
+    },
+    {
+      category: translate("SettingsScreen.changeDefaultCurrency"),
+      icon: "cash-outline",
+      id: "default-currency",
+      action: () => defaultCurrencyAction(),
+      enabled: true,
+      greyed: false,
       styleDivider: { backgroundColor: palette.lighterGrey, height: 18 },
     },
     {
@@ -235,6 +251,7 @@ export const SettingsScreenJSX: ScreenType = (params: SettingsScreenProps) => {
       greyed: !hasToken,
       hidden: !hasToken,
     },
+
   ]
 
   return (
