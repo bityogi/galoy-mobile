@@ -35,7 +35,11 @@
       {
         "content": [
           {
-            "answers": ["Digital money", "A video game", "A new cartoon character"],
+            "answers": [
+              "Digital money",
+              "A video game",
+              "A new cartoon character"
+            ],
             "feedback": [
               "Correct. You just earned 1 “sat”!",
               "Incorrect, please try again.",
@@ -65,7 +69,11 @@
             "type": "Text"
           },
           {
-            "answers": ["On the Internet", "On the moon", "In a Federal bank account"],
+            "answers": [
+              "On the Internet",
+              "On the moon",
+              "In a Federal bank account"
+            ],
             "feedback": [
               "Correct. You just earned another 5 sats.",
               "Incorrect. Well… at least not yet ;)",
@@ -572,7 +580,8 @@
     "logOutSuccesful": "You have been logged out.\n\nPlease restart the app to start fresh",
     "tapLogIn": "Tap to log in",
     "tapUserName": "Tap to set username",
-    "title": "Settings"
+    "title": "Settings",
+    "changeDefaultCurrency": "Change Default Currency"
   },
   "Languages": {
     "DEFAULT": "Default (OS)",

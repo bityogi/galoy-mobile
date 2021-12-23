@@ -606,10 +606,13 @@
     "totalExceed": "total excede su saldo"
   },
   "SettingsScreen": {
+    "activate": "Toque para activar",
     "activated": "Activada",
+    "logOutSuccesful": "Usted ha sido desconectado.\n\nReinicia la aplicación para empezar de nuevo",
     "tapLogIn": "\nIngrese aquí para iniciar sesión",
     "tapUserName": "Ingrese aquí para configurarlo",
-    "title": "Configuración"
+    "title": "Configuración",
+    "changeDefaultCurrency": "Cambiar moneda predeterminada"
   },
   "Languages": {
     "DEFAULT": "Predeterminado (OS)",
